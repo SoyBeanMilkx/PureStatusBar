@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:text="PureStatusbar"
+                android:id="@+id/app_title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center_vertical" />
+
+            <Button
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="+"
+                android:id="@+id/show_more"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130sp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/card_background"
+                android:gravity="center"
+                android:padding="20dp"
+                android:background="@drawable/card_background_red">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/statu_show"
+                    android:textColor="@color/white"
+                    android:text="This is a xp_moudle work on FLYme 10.5.5.1A" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/config"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:background="@color/white"
+                android:gravity="top|start"
+                android:paddingTop="10dp"
+                android:inputType="textMultiLine"
+                android:layout_gravity="fill"/>
+
+            <com.yuuki.purestatusbar.view.RippleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:id="@+id/configure">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Configure"
+                    android:id="@+id/configure_text"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:layout_margin="8dp"/>
+
+            </com.yuuki.purestatusbar.view.RippleView>
+
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
